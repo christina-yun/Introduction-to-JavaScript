@@ -123,7 +123,7 @@ function hungryDog(weight, age){
    else if ((age >= 1 && (6 < weight && weight <= 10)) || (age >= 0.582 && age <= 0.9999)){
     return 0.04 * weight;
   } 
-  // This part is breaking
+  
   else if (age >= 1 && weight >= 11 && weight <= 15){
     return 0.03 * weight;
   } 
@@ -131,7 +131,7 @@ function hungryDog(weight, age){
   else if (age >= 1 && weight > 15){
     return 0.02 * weight;
   } 
-  // End of broken code
+
   else if(age >= 0.1667 && age < 0.3333){
     return 0.1 * weight;
   }
