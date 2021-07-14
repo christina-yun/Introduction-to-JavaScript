@@ -283,81 +283,46 @@ HINT - try looking up the .includes() method
 
 function vowelCounter(aString) {
   const stringArray = aString.split('');
-  let upperA = 0;
-  let lowerA = 0
-  let upperE = 0;
-  let lowerE = 0;
-  let upperI = 0;
-  let lowerI = 0;
-  let upperO = 0;
-  let lowerO = 0;
-  let upperU = 0;
-  let lowerU = 0;
+  let vowelA = 0;
+  let vowelE = 0;
+  let vowelI = 0;
+  let vowelO = 0;
+  let vowelU = 0;
 
   for(let i = 0; i < aString.length; i++){
-    if(stringArray[i] === 'a'){
-      lowerA = lowerA + 1;
+    if(stringArray[i] === 'a' || stringArray[i] === 'A'){
+      vowelA = vowelA + 1;
     }
   }
 
   for(let i = 0; i < aString.length; i++){
-    if(stringArray[i] === 'A'){
-      upperA = upperA + 1;
+    if(stringArray[i] === 'e' || stringArray[i] === 'E'){
+      vowelE = vowelE + 1;
     }
   }
 
   for(let i = 0; i < aString.length; i++){
-    if(stringArray[i] === 'e'){
-      lowerE = lowerE + 1;
+    if(stringArray[i] === 'i' || stringArray[i] === 'I'){
+      vowelI = vowelI + 1;
     }
   }
 
   for(let i = 0; i < aString.length; i++){
-    if(stringArray[i] === 'E'){
-      upperE = upperE + 1;
+    if(stringArray[i] === 'o' || stringArray[i] === 'O'){
+      vowelO = vowelO + 1;
     }
   }
 
   for(let i = 0; i < aString.length; i++){
-    if(stringArray[i] === 'i'){
-      lowerI = lowerI + 1;
+    if(stringArray[i] === 'u' || stringArray[i] === 'U'){
+      vowelU = vowelU + 1;
     }
   }
 
-  for(let i = 0; i < aString.length; i++){
-    if(stringArray[i] === 'I'){
-      upperI = upperI + 1;
-    }
-  }
-
-  for(let i = 0; i < aString.length; i++){
-    if(stringArray[i] === 'o'){
-      lowerO = lowerO + 1;
-    }
-  }
-
-  for(let i = 0; i < aString.length; i++){
-    if(stringArray[i] === 'O'){
-      upperO = upperO + 1;
-    }
-  }
-  
-  for(let i = 0; i < aString.length; i++){
-    if(stringArray[i] === 'u'){
-      lowerU = lowerU + 1;
-    }
-  }
-
-  for(let i = 0; i < aString.length; i++){
-    if(stringArray[i] === 'U'){
-      upperU = upperU + 1;
-    }
-  }
-
-return upperA + lowerA + upperE + lowerE + upperI + lowerI + upperO + lowerO + upperU + lowerU;
+return vowelA + vowelE + vowelI + vowelO +vowelU;
 }
 
-console.log('My Test', vowelCounter('Cats are my favorite animal'));
+console.log('My Test', vowelCounter('aeiou AEIOU '));
 
 
 
