@@ -283,46 +283,18 @@ HINT - try looking up the .includes() method
 
 function vowelCounter(aString) {
   const stringArray = aString.split('');
-  let vowelA = 0;
-  let vowelE = 0;
-  let vowelI = 0;
-  let vowelO = 0;
-  let vowelU = 0;
+  let vowels = 0;
 
   for(let i = 0; i < aString.length; i++){
-    if(stringArray[i] === 'a' || stringArray[i] === 'A'){
-      vowelA = vowelA + 1;
+    if(stringArray[i] === 'a' || stringArray[i] === 'A' || stringArray[i] === 'e' || stringArray[i] === 'E' || stringArray[i] === 'i' || stringArray[i] === 'I' || stringArray[i] === 'o' || stringArray[i] === 'O' || stringArray[i] === 'u' || stringArray[i] === 'U'){
+      vowels = vowels + 1;
     }
   }
 
-  for(let i = 0; i < aString.length; i++){
-    if(stringArray[i] === 'e' || stringArray[i] === 'E'){
-      vowelE = vowelE + 1;
-    }
-  }
-
-  for(let i = 0; i < aString.length; i++){
-    if(stringArray[i] === 'i' || stringArray[i] === 'I'){
-      vowelI = vowelI + 1;
-    }
-  }
-
-  for(let i = 0; i < aString.length; i++){
-    if(stringArray[i] === 'o' || stringArray[i] === 'O'){
-      vowelO = vowelO + 1;
-    }
-  }
-
-  for(let i = 0; i < aString.length; i++){
-    if(stringArray[i] === 'u' || stringArray[i] === 'U'){
-      vowelU = vowelU + 1;
-    }
-  }
-
-return vowelA + vowelE + vowelI + vowelO +vowelU;
+  return vowels;
 }
 
-console.log('My Test', vowelCounter('aeiou AEIOU '));
+console.log('My Test', vowelCounter('HANK Diana sebastian'));
 
 
 
