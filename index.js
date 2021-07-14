@@ -264,6 +264,8 @@ if (90 <= score){
 }
 }
 
+console.log('task 7', grade(95));
+
 
 
 /*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
@@ -279,9 +281,83 @@ HINT - try looking up the .includes() method
 */
 
 
-function vowelCounter(/*add your code here*/) {
-  /*add your code here*/
+function vowelCounter(aString) {
+  const stringArray = aString.split('');
+  let upperA = 0;
+  let lowerA = 0
+  let upperE = 0;
+  let lowerE = 0;
+  let upperI = 0;
+  let lowerI = 0;
+  let upperO = 0;
+  let lowerO = 0;
+  let upperU = 0;
+  let lowerU = 0;
+
+  for(let i = 0; i < aString.length; i++){
+    if(stringArray[i] === 'a'){
+      lowerA = lowerA + 1;
+    }
+  }
+
+  for(let i = 0; i < aString.length; i++){
+    if(stringArray[i] === 'A'){
+      upperA = upperA + 1;
+    }
+  }
+
+  for(let i = 0; i < aString.length; i++){
+    if(stringArray[i] === 'e'){
+      lowerE = lowerE + 1;
+    }
+  }
+
+  for(let i = 0; i < aString.length; i++){
+    if(stringArray[i] === 'E'){
+      upperE = upperE + 1;
+    }
+  }
+
+  for(let i = 0; i < aString.length; i++){
+    if(stringArray[i] === 'i'){
+      lowerI = lowerI + 1;
+    }
+  }
+
+  for(let i = 0; i < aString.length; i++){
+    if(stringArray[i] === 'I'){
+      upperI = upperI + 1;
+    }
+  }
+
+  for(let i = 0; i < aString.length; i++){
+    if(stringArray[i] === 'o'){
+      lowerO = lowerO + 1;
+    }
+  }
+
+  for(let i = 0; i < aString.length; i++){
+    if(stringArray[i] === 'O'){
+      upperO = upperO + 1;
+    }
+  }
+  
+  for(let i = 0; i < aString.length; i++){
+    if(stringArray[i] === 'u'){
+      lowerU = lowerU + 1;
+    }
+  }
+
+  for(let i = 0; i < aString.length; i++){
+    if(stringArray[i] === 'U'){
+      upperU = upperU + 1;
+    }
+  }
+
+return upperA + lowerA + upperE + lowerE + upperI + lowerI + upperO + lowerO + upperU + lowerU;
 }
+
+console.log('My Test', vowelCounter('Cats are my favorite animal'));
 
 
 
